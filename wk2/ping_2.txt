@@ -1,0 +1,13 @@
+
+➜  ~ ping 138.197.147.137     
+PING 138.197.147.137 (138.197.147.137): 56 data bytes
+64 bytes from 138.197.147.137: icmp_seq=0 ttl=53 time=89.331 ms
+64 bytes from 138.197.147.137: icmp_seq=1 ttl=53 time=16.566 ms
+64 bytes from 138.197.147.137: icmp_seq=2 ttl=53 time=20.487 ms
+64 bytes from 138.197.147.137: icmp_seq=3 ttl=53 time=22.237 ms
+64 bytes from 138.197.147.137: icmp_seq=4 ttl=53 time=20.564 ms
+64 bytes from 138.197.147.137: icmp_seq=5 ttl=53 time=16.468 ms
+
+--- 138.197.147.137 ping statistics ---
+6 packets transmitted, 6 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 16.468/30.942/89.331/26.199 ms

@@ -1,0 +1,42 @@
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~# nmap georgebrown.ca
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-02-04 01:18 UTC
+Nmap scan report for georgebrown.ca (198.96.86.176)
+Host is up (0.0030s latency).
+rDNS record for 198.96.86.176: gbcfirst.ca
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 4.96 seconds
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~# 
+
+#----------------------------------------------------------------------#
+# Scan a single Port
+
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~#  nmap -p 443 georgebrown.ca
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-02-04 01:20 UTC
+Nmap scan report for georgebrown.ca (198.96.86.176)
+Host is up (0.0034s latency).
+rDNS record for 198.96.86.176: impact.georgebrown.ca
+
+PORT    STATE SERVICE
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 0.08 seconds
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~# 
+
+#----------------------------------------------------------------------#
+# Scan a range of ports
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-02-04 01:21 UTC
+Nmap scan report for georgebrown.ca (198.96.86.176)
+Host is up (0.0034s latency).
+Not shown: 362 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 2.79 seconds
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~# 
+
