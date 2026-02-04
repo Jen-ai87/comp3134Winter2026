@@ -1,0 +1,30 @@
+# 5. Display Captured Packets in HEX and ASCII
+
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~# tcpdump -XX -i eth0
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+02:03:43.525944 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh > pool-99-237-196-67.cpe.net.cable.rogers.com.52615: Flags [P.], seq 3245950503:3245950659, ack 280147953, win 519, options [nop,nop,TS val 1139430412 ecr 299057428], length 156
+	0x0000:  fe00 0000 0101 92b8 82d2 8fe0 0800 4512  ..............E.
+	0x0010:  00d0 627e 4000 4006 9118 8ac5 9389 63ed  ..b~@.@.......c.
+	0x0020:  c443 0016 cd87 c179 4627 10b2 b7f1 8018  .C.....yF'......
+	0x0030:  0207 4742 0000 0101 080a 43ea 540c 11d3  ..GB......C.T...
+	0x0040:  4114 3c6a df0b 900b 46c3 5ad1 ce97 4ea5  A.<j....F.Z...N.
+	0x0050:  4d5a 9de1 b2bc 9f9b 5b70 0557 7392 dd2b  MZ......[p.Ws..+
+	0x0060:  13b2 43cf 4389 e6d4 333f 062a d8cf ed39  ..C.C...3?.*...9
+	0x0070:  b24f c020 ef0c b792 58c3 f130 2d22 1fcf  .O......X..0-"..
+	0x0080:  8916 1895 21cb 904a 181a 08ea fd29 36c1  ....!..J.....)6.
+	0x0090:  99f1 4403 b500 ae96 4be2 fe59 1b1f 5f67  ..D.....K..Y.._g
+	0x00a0:  03d6 a061 1ea1 2b9a a954 8689 3bf4 f610  ...a..+..T..;...
+	0x00b0:  157c bec3 30a4 7b1b 5128 2aaa b8df 4f3e  .|..0.{.Q(*...O>
+	0x00c0:  ffef 4086 a3a5 c43c 88a9 11d0 b2b3 9379  ..@....<.......y
+	0x00d0:  4d60 1374 d7f6 5265 472b 9ebc efbd       M`.t..ReG+....
+02:03:43.526020 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh > pool-99-237-196-67.cpe.net.cable.rogers.com.52615: Flags [P.], seq 156:224, ack 1, win 519, options [nop,nop,TS val 1139430412 ecr 299057428], length 68
+	0x0000:  fe00 0000 0101 92b8 82d2 8fe0 0800 4512  ..............E.
+	0x0010:  0078 627f 4000 4006 916f 8ac5 9389 63ed  .xb.@.@..o....c.
+	0x0020:  c443 0016 cd87 c179 46c3 10b2 b7f1 8018  .C.....yF.......
+	0x0030:  0207 46ea 0000 0101 080a 43ea 540c 11d3  ..F.......C.T...
+	0x0040:  4114 0e3f 9ac4 e0cf adcc 022b 0a56 03b5  A..?.......+.V..
+	0x0050:  8996 1429 ee2e 3b2d 828c 96e0 1ed6 d54c  ...)..;-.......L
+	0x0060:  fa20 b44a 6fca ca09 b372 0739 5696 7fd7  ...Jo....r.9V...
+	0x0070:  0653 88bd 5021 b133 a539 0f83 e5c0 c0e3  .S..P!.3.9......
+	0x0080:  cac4 0526 f97a                           ...&.z

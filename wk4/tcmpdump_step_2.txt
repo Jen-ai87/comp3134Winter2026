@@ -1,0 +1,14 @@
+# 2. Capture Only N Number of Packets
+
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~# tcpdump -c 5 -i eth0
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+02:00:58.981708 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh > pool-99-237-196-67.cpe.net.cable.rogers.com.52615: Flags [P.], seq 3234707451:3234707559, ack 280104873, win 519, options [nop,nop,TS val 1139265868 ecr 298892893], length 108
+02:00:58.981797 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh > pool-99-237-196-67.cpe.net.cable.rogers.com.52615: Flags [P.], seq 108:168, ack 1, win 519, options [nop,nop,TS val 1139265868 ecr 298892893], length 60
+02:00:58.981873 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh > pool-99-237-196-67.cpe.net.cable.rogers.com.52615: Flags [P.], seq 168:268, ack 1, win 519, options [nop,nop,TS val 1139265868 ecr 298892893], length 100
+02:00:58.986805 IP pool-99-237-196-67.cpe.net.cable.rogers.com.52615 > lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh: Flags [.], ack 0, win 2048, options [nop,nop,TS val 298892910 ecr 1139265857], length 0
+02:00:58.999792 IP pool-99-237-196-67.cpe.net.cable.rogers.com.52615 > lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh: Flags [.], ack 268, win 2048, options [nop,nop,TS val 298892924 ecr 1139265868], length 0
+5 packets captured
+28 packets received by filter
+0 packets dropped by kernel
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~# 

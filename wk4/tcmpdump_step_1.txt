@@ -1,0 +1,18 @@
+# 1. Capture Packets from Specific Interface
+
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~# tcpdump -i eth0
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+01:58:51.368165 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh > pool-99-237-196-67.cpe.net.cable.rogers.com.52615: Flags [P.], seq 3234611095:3234611283, ack 280094321, win 519, options [nop,nop,TS val 1139138254 ecr 298765284], length 188
+01:58:51.372362 IP pool-99-237-196-67.cpe.net.cable.rogers.com.52615 > lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh: Flags [.], ack 0, win 2048, options [nop,nop,TS val 298765300 ecr 1139138245], length 0
+01:58:51.378848 IP pool-99-237-196-67.cpe.net.cable.rogers.com.52615 > lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh: Flags [P.], seq 1:37, ack 0, win 2048, options [nop,nop,TS val 298765306 ecr 1139138245], length 36
+01:58:51.378985 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh > pool-99-237-196-67.cpe.net.cable.rogers.com.52615: Flags [P.], seq 188:224, ack 37, win 519, options [nop,nop,TS val 1139138265 ecr 298765306], length 36
+01:58:51.416687 IP 172.69.214.98.10539 > lamponubuntu2404-s-1vcpu-1gb-tor1-01.59357: Flags [S], seq 2999074065, win 65535, options [mss 1460,sackOK,TS val 3492138141 ecr 0,nop,wscale 13], length 0
+01:58:51.427686 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.ssh > pool-99-237-196-67.cpe.net.cable.rogers.com.52615: Flags [P.], seq 188:224, ack 37, win 519, options [nop,nop,TS val 1139138314 ecr 298765306], length 36
+01:58:51.460682 IP 172.70.39.214.12356 > lamponubuntu2404-s-1vcpu-1gb-tor1-01.59357: Flags [S], seq 129506728, win 65535, options [mss 1460,sackOK,TS val 1819421959 ecr 0,nop,wscale 13], length 0
+01:58:51.467312 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.48936 > 67.207.67.3.domain: 53833+ [1au] PTR? 67.196.237.99.in-addr.arpa. (55)
+01:58:51.467517 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.35630 > 67.207.67.3.domain: Flags [S], seq 3814727056, win 64240, options [mss 1460,sackOK,TS val 3575196307 ecr 0,nop,wscale 7,tfo  cookiereq,nop,nop], length 0
+01:58:51.467828 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.55798 > 67.207.67.3.domain: 7058+ [1au] PTR? 137.147.197.138.in-addr.arpa. (57)
+01:58:51.470044 IP 67.207.67.3.domain > lamponubuntu2404-s-1vcpu-1gb-tor1-01.35630: Flags [S.], seq 3080316673, ack 3814727057, win 65160, options [mss 1460,sackOK,TS val 3331596597 ecr 3575196307,nop,wscale 10], length 0
+01:58:51.470100 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.35630 > 67.207.67.3.domain: Flags [.], ack 1, win 502, options [nop,nop,TS val 3575196310 ecr 3331596597], length 0
+01:58:51.470143 IP lamponubuntu2404-s-1vcpu-1gb-tor1-01.35630 > 67.207.67.3.domain: Flags [P.], seq 1:47, ack 1, win 502, options [nop,nop,TS val 3575196310 ecr 3331596597], length 46 57803+ PTR? 67.196.237.99.in-addr.arpa. (44)

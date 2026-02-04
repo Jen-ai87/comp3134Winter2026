@@ -1,0 +1,8 @@
+# 6. Capture and Save Packets in a File
+
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~# tcpdump -w 0001.pcap -i eth0
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+382 packets captured
+389 packets received by filter
+0 packets dropped by kernel
+root@lamponubuntu2404-s-1vcpu-1gb-tor1-01:~# 
