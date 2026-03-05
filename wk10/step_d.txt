@@ -1,0 +1,9 @@
+When passing ?q=hello, the page shows PHP warning messages directly 
+in the browser because the folder "hello" does not exist.
+
+The issue is that the page has no validation on the input, so it 
+tries to scan any folder name given to it.
+
+Sensitive information exposed: The full server path is revealed in 
+the error message: /var/www/html/directory_traversal_part1.php
+This tells an attacker exactly where files are stored on the server.

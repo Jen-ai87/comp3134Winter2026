@@ -1,0 +1,9 @@
+To mitigate the directory traversal issues two fixes were applied:
+
+Fix 1: Used basename() on the user input. This strips any directory 
+path from the input so ../  and %2e%2e%2f cannot be used to navigate 
+above the current directory.
+
+Fix 2: Used file_exists() to check if the folder actually exists 
+before scanning it. If it does not exist the page shows a safe error 
+message instead of a PHP warning that reveals server information.

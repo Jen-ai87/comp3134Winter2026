@@ -1,0 +1,9 @@
+When passing ?q=%2e%2e%2f the page shows the contents of the /var/www/ 
+directory. The %2e%2e%2f is a URL encoded version of ../
+
+The issue is that the page does not decode and check the input, so 
+URL encoding can be used to bypass any basic filters that look for ../
+
+Sensitive information exposed: The /var/www/ directory is visible 
+showing the html folder. An attacker can use URL encoding to perform 
+directory traversal and navigate the server file system.

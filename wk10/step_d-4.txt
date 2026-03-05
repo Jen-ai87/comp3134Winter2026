@@ -1,0 +1,9 @@
+When passing ?q=../../ the page jumped two levels above the web root 
+and displayed the contents of the /var/ directory on the server.
+
+The issue is that there is no restriction stopping the user from 
+navigating outside of the web root folder.
+
+Sensitive information exposed: System directories are visible such as 
+backups, log, cache, mail and www. This reveals the server folder 
+structure and an attacker could use this to find sensitive data.

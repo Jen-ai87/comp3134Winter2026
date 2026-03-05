@@ -1,0 +1,7 @@
+The problem with HTML comments is that anyone can see them by 
+viewing the page source in the browser. This exposes sensitive 
+information like passwords, usernames and server details.
+
+The fix is to convert all HTML comments to PHP comments. PHP 
+comments are processed on the server and never sent to the browser 
+so users cannot see them when viewing the page source.
