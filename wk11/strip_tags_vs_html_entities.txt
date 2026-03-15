@@ -1,0 +1,34 @@
+strip_tags vs HTML Entities
+============================
+
+strip_tags():
+-------------
+The strip_tags() function removes all HTML and PHP tags from a string entirely.
+For example, <script>alert('hello')</script> becomes: alert('hello')
+The tags are deleted but the text content between them remains.
+This completely prevents any HTML or JavaScript from being rendered.
+
+htmlspecialchars() / HTML Entities:
+-------------------------------------
+The htmlspecialchars() function converts special HTML characters into their
+HTML entity equivalents so they are displayed as plain text rather than
+interpreted as code.
+For example, <script>alert('hello')</script> becomes:
+&lt;script&gt;alert(&#039;hello&#039;)&lt;/script&gt;
+The browser displays the raw text instead of executing it as code.
+
+Difference:
+-----------
+- strip_tags() REMOVES the tags completely — the user sees only the text
+  content with no trace of the tags.
+- htmlspecialchars() ESCAPES the tags — the user sees the full original input
+  displayed as plain text (including the angle brackets), but it is never
+  executed as HTML or JavaScript.
+
+Which is better?
+----------------
+htmlspecialchars() is generally considered safer for output because it
+preserves the original input visually while neutralizing it, making it
+easier to debug and audit. strip_tags() can sometimes be bypassed with
+malformed or nested tags, whereas htmlspecialchars() encodes every
+special character, leaving no room for injection.

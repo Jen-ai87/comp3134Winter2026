@@ -1,0 +1,36 @@
+Query String Observations - dictionary.com
+==========================================
+URL: https://www.dictionary.com/browse/cybersecurity
+
+Scenario 1: Valid English Word (via form)
+-----------------------------------------
+Typed a valid English word (e.g. "hello") into the search form.
+Observation: The page displayed the word's definition. The URL changed to
+/browse/hello using the query string. The site accepted the input and returned
+the correct content without any issues.
+
+Scenario 2: Invalid English Word (via URL)
+------------------------------------------
+Replaced the word after /browse/ in the URL with an invalid/made-up word
+(e.g. /browse/xyzabc123).
+Observation: The site displayed a "no results found" message or a page
+indicating the word does not exist in the dictionary. The site handled the
+invalid input gracefully without crashing or exposing an error.
+
+Scenario 3: XSS Script Tag (via form)
+--------------------------------------
+Typed <script>alert(%27hello%27)</script> into the search form.
+Observation: The script tag was NOT executed. The site's security (Cloudflare
+WAF) detected the malicious input and either sanitized it, displayed it as
+plain text, or blocked the request. The JavaScript alert did not fire,
+demonstrating that the site mitigates XSS via input through the form.
+
+Scenario 4: XSS Script Tag (via URL)
+--------------------------------------
+Added <script>alert(%27hello%27)</script> after the term= section of the URL.
+Observation: The site blocked the request entirely and displayed a Cloudflare
+"Sorry, you have been blocked" page. The message stated that the security
+service detected the action as a potential attack (malformed data / XSS
+attempt). The JavaScript alert did NOT execute. This confirms that
+dictionary.com uses a WAF (Cloudflare) as a mitigation technique to block
+cross-site scripting (XSS) attacks submitted via query strings.
