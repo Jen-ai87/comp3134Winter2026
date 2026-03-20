@@ -1,0 +1,16 @@
+Stored XSS Issue:
+
+1. The file storedxss.txt contains a malicious JavaScript script.
+
+2. When storexss.php loads the file, it outputs the contents directly 
+   to the browser without any sanitization.
+
+3. The browser executes the script, which redirects the user to a 
+   different page without their knowledge or consent.
+
+4. This is dangerous because an attacker can store malicious code in 
+   a file or database, and every user who visits the page will be 
+   affected automatically.
+
+5. The fix is to sanitize output using htmlspecialchars() in PHP before 
+   displaying any stored content in the browser.

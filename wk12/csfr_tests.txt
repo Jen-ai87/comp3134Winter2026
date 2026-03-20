@@ -1,0 +1,19 @@
+CSRF Tests - Observations
+
+Test 1: Using csfr_form.php (Protected Form)
+- Opened csfr_form.php in the browser
+- Entered username: host, password: pass
+- Form submitted to csfr_action.php with a valid session token
+- Result: Login successful
+- The session token matched, so the request was allowed through
+
+Test 2: Using csfr.html (Forged/Attack Page)
+- Opened csfr.html in the browser
+- Page automatically submitted credentials to csfr.php
+- Result: Login successful (no protection on csfr.php)
+- The forged page bypassed the login because csfr.php has no token check
+
+Conclusion:
+- Without CSRF protection (csfr.php), any page can forge a request and succeed
+- With CSRF protection (csfr_action.php), only requests with a valid session 
+  token are accepted, blocking forged requests from external pages

